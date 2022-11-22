@@ -11,6 +11,8 @@ import com.mashape.unirest.http.Unirest;
 public class Main {
     public static void main(String[] args) throws Exception{
 
+        String apiKey = "YOUR_API_KEY_HERE";
+
         // Take user input for city and state
         Scanner scanner = new Scanner(System.in);
 
@@ -25,7 +27,7 @@ public class Main {
 
         // Call to the api
         HttpResponse<String> response = Unirest.get(inputString)
-                .header("X-RapidAPI-Key", "5faae8c877msh39b36d450f4b78ap185e5bjsnce9403e8d822")
+                .header("X-RapidAPI-Key", apiKey)
                 .header("X-RapidAPI-Host", "visual-crossing-weather.p.rapidapi.com")
                 .asString();
 
