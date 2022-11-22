@@ -21,7 +21,7 @@ public class Main {
         String state = scanner.nextLine();
 
         // Input the city and state into the call to the API
-        String inputString = "YOUR_API_KEY_HERE";
+        String inputString = "https://visual-crossing-weather.p.rapidapi.com/forecast?location=" + city + "%2C" + state + "%2CUSA&aggregateHours=24&shortColumnNames=0&unitGroup=us&contentType=csv";
 
         // Call to the api
         HttpResponse<String> response = Unirest.get(inputString)
